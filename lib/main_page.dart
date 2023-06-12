@@ -86,12 +86,17 @@ class _MainPageState extends State<MainPage> {
                     child: ElevatedButton(
                       onPressed: () {
                         print(_textController.text);
+
+                        //화면 갱신
+
+                        setState(() {});
                       },
                       child: Text('login'),
                     ),
                   ),
                 ],
               ),
+              Text(_textController.text),
               Image.network(
                 'https://cdn.pixabay.com/photo/2023/05/31/17/54/cat-8031947_1280.jpg',
                 width: 100,
