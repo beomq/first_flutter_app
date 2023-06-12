@@ -14,6 +14,10 @@ class _MainPageState extends State<MainPage> {
 
   @override
   void dispose() {
+    count = 11; // 전역변수
+    int i = 10; // 지역변수
+    i = 11;
+    print(i);
     _textController.dispose();
     super.dispose();
   }
