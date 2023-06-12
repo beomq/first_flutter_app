@@ -9,6 +9,14 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int count = 0;
+  String _text = '';
+  final _textController = TextEditingController();
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,19 +71,22 @@ class _MainPageState extends State<MainPage> {
                   Expanded(
                     flex: 3,
                     child: TextField(
+                      controller: _textController,
                       decoration: InputDecoration(
                         labelText: '글자',
                         border: OutlineInputBorder(),
                       ),
                       onChanged: (text) {
-                        print(text);
+                        _text = text;
                       },
                     ),
                   ),
                   Expanded(
                     flex: 2,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        print(_textController.text);
+                      },
                       child: Text('login'),
                     ),
                   ),
