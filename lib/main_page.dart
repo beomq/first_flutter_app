@@ -55,6 +55,18 @@ class _MainPageState extends State<MainPage> {
                 print(text);
               },
             ),
+            Image.network(
+              'https://cdn.pixabay.com/photo/2023/05/31/17/54/cat-8031947_1280.jpg',
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+              'assets/pic.jpg',
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
           ],
         ),
       ),
